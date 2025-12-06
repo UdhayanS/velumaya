@@ -1,91 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <style>
-        body { margin: 0; padding: 0; }
-        html { height: 100%; cursor: default; }
-        body {
-            font-family: "Roboto", sans-serif; /* Default font */
-            width: 100%; height: 100%;
-            text-align: center;
-            display: table;
-            opacity: 1;
-            animation: fadein 3s forwards;
-        }
-        h2 {
-            font-weight: 300;
-            margin-bottom: 25px;
-        }
-        img {
-            width: 25%; /* Image width */
-            border: 0; /* For IE */
-            /* Aspect ratio of image, gives initial dimension to prevent text moving down once image is loaded */
-            /* When changing logo, change this also */
-            aspect-ratio: 125 / 50;
-        }
-        #main {
-            vertical-align: middle;
-            display: table-cell;
-        }
-        /* Progress bar */
-        #progress {
-            width: 45%; /* Bar width */
-            margin: 0 auto;
-            border-radius: 10px; /* Roundness */
-            background-color: #a8a8a8; /* Background colour */
-            padding: 7px 5px;
-            /* border: 5px solid #a8a8a8; Border */
-        }
-        #fill {
-            padding: 2px 0;
-            background-color: #00b98b; /* Fill colour */
-            width: 35%; /* Bar percentage, change text below also */
-            border-radius: 25px; /* Roundness */
-            animation: proanimate 2s;
-        }
-        #barpercent h3 {
-            color: white; /* Bar percentage text colour */
-            margin: 0; padding: 0;
-            opacity: 1;
-            animation: fadein 3s forwards;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coming Soon – Velumaya Logistics</title>
 
-        /* Fades in animation */
-        @keyframes fadein  {
-            from { opacity: 0; }
-        }
-        /* Animates bar on page load */
-        @keyframes proanimate {
-            from { width: 0%; }
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-        @media screen and (max-width:600px) {
-            img {
-                width: 60%;
-            }
-            h1 {
-                font-size: 1.3em;
-            }
-            h2 {
-                margin: 1.1em;
-                font-size: 1.1em;
-            }
-            #progress {
-                width: 80%; /* Bar width */
-            }
-        }
-    </style>
-    <title>Coming Soon</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: "Poppins", sans-serif;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        background: url("your-image.jpg") center/cover no-repeat;
+        position: relative;
+    }
+
+    /* Gradient overlay */
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,128,255,0.4));
+        backdrop-filter: blur(3px);
+        animation: fadeIn 1.5s ease-in forwards;
+    }
+
+    /* Content box */
+    .content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        animation: slideUp 1.5s ease-out forwards;
+    }
+
+    .title {
+        font-size: 3rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin-bottom: 30px;
+        opacity: 0.9;
+    }
+
+    /* Loader ring */
+    .loader {
+        width: 90px;
+        height: 90px;
+        border: 6px solid rgba(255,255,255,0.3);
+        border-top-color: #00ffcc;
+        border-radius: 50%;
+        animation: spin 1.4s linear infinite;
+        margin: 0 auto 20px auto;
+    }
+
+    .percentage {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 10px;
+        color: #00ffcc;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes slideUp {
+        from { transform: translateY(40px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 600px) {
+        .title { font-size: 2.2rem; }
+        .subtitle { font-size: 1rem; }
+        .loader { width: 70px; height: 70px; }
+    }
+</style>
 </head>
+
 <body>
-    <div id="main">
-        <h1>Velumaya</h1>
-        <h2>Our website is currently under construction. <a href="https://velumaya.com/">velumaya.com</a></h2>
-        <div id="progress"><div id="fill"><div id="barpercent"><h3>35%</h3></div></div></div>
-    </div>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+<div class="overlay"></div>
+
+<div class="content">
+    <div class="title">Velumaya Logistics</div>
+    <div class="subtitle">Our new website is loading soon… stay tuned!</div>
+
+    <div class="loader"></div>
+    <div class="percentage">35%</div>
+
+    <p style="margin-top:20px; opacity:0.9;">
+        Visit: <a href="https://velumaya.com" style="color:#00ffcc; text-decoration:none;">velumaya.com</a>
+    </p>
+</div>
+
 </body>
 </html>

@@ -1,116 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="google-adsense-account" content="ca-pub-4166657017612175">
-<title>Coming Soon – Velumaya Logistics</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-adsense-account" content="ca-pub-4166657017612175">
+	<title>Coming Soon – Velumaya Logistics</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
 
-    body {
-        font-family: "Poppins", sans-serif;
-        height: 100vh;
-        width: 100%;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        background: url("image.jpg") center/cover no-repeat;
-        position: relative;
-    }
+		body {
+			font-family: "Poppins", sans-serif;
+			height: 100vh;
+			width: 100%;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #fff;
+			background: url("image.jpg") center/cover no-repeat;
+			position: relative;
+		}
 
-    /* Gradient overlay */
-    .overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,128,255,0.4));
-        backdrop-filter: blur(3px);
-        animation: fadeIn 1.5s ease-in forwards;
-    }
+		/* Gradient overlay */
+		.overlay {
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 128, 255, 0.4));
+			backdrop-filter: blur(3px);
+			animation: fadeIn 1.5s ease-in forwards;
+		}
 
-    /* Content box */
-    .content {
-        position: relative;
-        z-index: 2;
-        text-align: center;
-        animation: slideUp 1.5s ease-out forwards;
-    }
+		/* Content box */
+		.content {
+			position: relative;
+			z-index: 2;
+			text-align: center;
+			animation: slideUp 1.5s ease-out forwards;
+		}
 
-    .title {
-        font-size: 3rem;
-        font-weight: 600;
-        letter-spacing: 2px;
-        text-shadow: 0 4px 10px rgba(0,0,0,0.6);
-        margin-bottom: 10px;
-    }
+		.title {
+			font-size: 3rem;
+			font-weight: 600;
+			letter-spacing: 2px;
+			text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+			margin-bottom: 10px;
+		}
 
-    .subtitle {
-        font-size: 1.2rem;
-        font-weight: 300;
-        margin-bottom: 30px;
-        opacity: 0.9;
-    }
+		.subtitle {
+			font-size: 1.2rem;
+			font-weight: 300;
+			margin-bottom: 30px;
+			opacity: 0.9;
+		}
 
-    /* Loader ring */
-    .loader {
-        width: 90px;
-        height: 90px;
-        border: 6px solid rgba(255,255,255,0.3);
-        border-top-color: #00ffcc;
-        border-radius: 50%;
-        animation: spin 1.4s linear infinite;
-        margin: 0 auto 20px auto;
-    }
+		/* Loader ring */
+		.loader {
+			width: 90px;
+			height: 90px;
+			border: 6px solid rgba(255, 255, 255, 0.3);
+			border-top-color: #00ffcc;
+			border-radius: 50%;
+			animation: spin 1.4s linear infinite;
+			margin: 0 auto 20px auto;
+		}
 
-    .percentage {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-top: 10px;
-        color: #00ffcc;
-    }
+		.percentage {
+			font-size: 1.5rem;
+			font-weight: 600;
+			margin-top: 10px;
+			color: #00ffcc;
+		}
 
-    /* Animations */
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-    @keyframes slideUp {
-        from { transform: translateY(40px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
-    }
-    @keyframes spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-    }
+		/* Animations */
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
 
-    @media (max-width: 600px) {
-        .title { font-size: 2.2rem; }
-        .subtitle { font-size: 1rem; }
-        .loader { width: 70px; height: 70px; }
-    }
-</style>
+			to {
+				opacity: 1;
+			}
+		}
+
+		@keyframes slideUp {
+			from {
+				transform: translateY(40px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		@keyframes spin {
+			from {
+				transform: rotate(0deg);
+			}
+
+			to {
+				transform: rotate(360deg);
+			}
+		}
+
+		@media (max-width: 600px) {
+			.title {
+				font-size: 2.2rem;
+			}
+
+			.subtitle {
+				font-size: 1rem;
+			}
+
+			.loader {
+				width: 70px;
+				height: 70px;
+			}
+		}
+	</style>
 </head>
 
 <body>
 
-<div class="overlay"></div>
+	<div class="overlay"></div>
 
-<div class="content">
-    <div class="title">Velumaya Logistics</div>
-    <div class="subtitle">Our new website is loading soon… stay tuned!</div>
+	<div class="content">
+		<div class="title">Velumaya Logistics</div>
+		<div class="subtitle">Our new website is loading soon… stay tuned!</div>
 
-    <div class="loader"></div>
-    <div class="percentage">35%</div>
+		<div class="loader"></div>
+		<div class="percentage">35%</div>
 
-    <p style="margin-top:20px; opacity:0.9;">
-        Visit: <a href="https://velumaya.com" style="color:#00ffcc; text-decoration:none;">velumaya.com</a>
-    </p>
-</div>
+		<p style="margin-top:20px; opacity:0.9;">
+			Visit: <a href="https://velumaya.com" style="color:#00ffcc; text-decoration:none;">velumaya.com</a>
+		</p>
+	</div>
 
 </body>
+
 </html>

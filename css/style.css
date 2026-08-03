@@ -201,8 +201,12 @@ footer {
 .custom-navbar .navbar-brand {
   color: #1a1a2e;
   font-weight: 600;
-  font-size: 3rem;
-  line-height: 40px;
+  font-size: 2.4rem;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 .custom-navbar .nav li a {
@@ -211,7 +215,9 @@ footer {
   font-weight: 500;
   letter-spacing: 0.6px;
   text-transform: uppercase;
-  line-height: 40px;
+  line-height: 60px;
+  padding-top: 0;
+  padding-bottom: 0;
   transition: color 0.3s ease;
 }
 
@@ -284,10 +290,11 @@ footer {
 .custom-navbar .brand-with-logo {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .custom-navbar .nav-logo {
-  height: 55px;
+  height: 48px;
   width: auto;
   margin-right: 12px;
 }
@@ -295,16 +302,16 @@ footer {
 .custom-navbar .brand-text {
   color: #1a1a2e;
   font-weight: 600;
-  font-size: 3rem;
-  line-height: 40px;
+  font-size: 2.2rem;
+  line-height: 1;
 }
 
 @media (max-width: 768px) {
   .custom-navbar .nav-logo {
-    height: 44px;
+    height: 38px;
   }
   .custom-navbar .brand-text {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -1004,6 +1011,8 @@ footer a:hover {
   .custom-navbar .nav li a {
     font-size: 11px;
     line-height: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 
   #intro { height: 70vh; }
@@ -1022,7 +1031,13 @@ footer a:hover {
 @media (max-width: 768px) {
 
   .custom-navbar .navbar-brand {
-    line-height: 20px;
+    line-height: 1;
+    height: 50px;
+  }
+
+  .custom-navbar .navbar-toggle {
+    margin-top: 13px;
+    margin-bottom: 13px;
   }
 
   h1 { font-size: 30px; }

@@ -2,148 +2,423 @@
 <html lang="en">
 
 <head>
+
+	<title>Velumaya</title>
+	<meta name="description" content="Velumaya Logistics LLC - Reliable Logistics & Manpower Consulting Solutions in Dubai, UAE">
+	<meta name="author" content="Velumaya Logistics LLC">
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="google-adsense-account" content="ca-pub-4166657017612175">
-	<title>Coming Soon – Velumaya Logistics</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
 
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
+	<!-- Main css -->
+	<link rel="stylesheet" href="css/style.css">
 
-		body {
-			font-family: "Poppins", sans-serif;
-			height: 100vh;
-			width: 100%;
-			overflow: hidden;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			color: #fff;
-			background: url("image.jpg") center/cover no-repeat;
-			position: relative;
-		}
+	<!-- Google Font -->
+	<link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
 
-		/* Gradient overlay */
-		.overlay {
-			position: absolute;
-			inset: 0;
-			background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 128, 255, 0.4));
-			backdrop-filter: blur(3px);
-			animation: fadeIn 1.5s ease-in forwards;
-		}
-
-		/* Content box */
-		.content {
-			position: relative;
-			z-index: 2;
-			text-align: center;
-			animation: slideUp 1.5s ease-out forwards;
-		}
-
-		.title {
-			font-size: 3rem;
-			font-weight: 600;
-			letter-spacing: 2px;
-			text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-			margin-bottom: 10px;
-		}
-
-		.subtitle {
-			font-size: 1.2rem;
-			font-weight: 300;
-			margin-bottom: 30px;
-			opacity: 0.9;
-		}
-
-		/* Loader ring */
-		.loader {
-			width: 90px;
-			height: 90px;
-			border: 6px solid rgba(255, 255, 255, 0.3);
-			border-top-color: #00ffcc;
-			border-radius: 50%;
-			animation: spin 1.4s linear infinite;
-			margin: 0 auto 20px auto;
-		}
-
-		.percentage {
-			font-size: 1.5rem;
-			font-weight: 600;
-			margin-top: 10px;
-			color: #00ffcc;
-		}
-
-		/* Animations */
-		@keyframes fadeIn {
-			from {
-				opacity: 0;
-			}
-
-			to {
-				opacity: 1;
-			}
-		}
-
-		@keyframes slideUp {
-			from {
-				transform: translateY(40px);
-				opacity: 0;
-			}
-
-			to {
-				transform: translateY(0);
-				opacity: 1;
-			}
-		}
-
-		@keyframes spin {
-			from {
-				transform: rotate(0deg);
-			}
-
-			to {
-				transform: rotate(360deg);
-			}
-		}
-
-		@media (max-width: 600px) {
-			.title {
-				font-size: 2.2rem;
-			}
-
-			.subtitle {
-				font-size: 1rem;
-			}
-
-			.loader {
-				width: 70px;
-				height: 70px;
-			}
-		}
-	</style>
 </head>
 
-<body>
+<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 
-	<div class="overlay"></div>
-
-	<div class="content">
-		<div class="title">Velumaya Logistics</div>
-		<div class="subtitle">Our new website is loading soon… stay tuned!</div>
-
-		<div class="loader"></div>
-		<div class="percentage">35%</div>
-
-		<p style="margin-top:20px; opacity:0.9;">
-			Visit: <a href="https://velumaya.com" style="color:#00ffcc; text-decoration:none;">velumaya.com</a>
-		</p>
+	<!-- =========================
+	     PRE LOADER       
+	============================== -->
+	<div class="preloader">
+		<div class="sk-rotating-plane"></div>
 	</div>
+
+
+	<!-- =========================
+	     NAVIGATION LINKS     
+	============================== -->
+	<div class="navbar navbar-fixed-top custom-navbar" role="navigation">
+		<div class="container">
+
+			<!-- navbar header -->
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon icon-bar"></span>
+					<span class="icon icon-bar"></span>
+					<span class="icon icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand brand-with-logo">
+					<img src="images/logistics/logo.png" alt="Velu Maya Logo" class="nav-logo">
+					<span class="brand-text">Velu Maya</span>
+				</a>
+			</div>
+
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#intro" class="smoothScroll">Home</a></li>
+					<li><a href="#overview" class="smoothScroll">About</a></li>
+					<li><a href="#services" class="smoothScroll">Services</a></li>
+					<li><a href="#speakers" class="smoothScroll">Teams</a></li>
+					<li><a href="#register" class="smoothScroll">Contact</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- =========================
+	    INTRO SECTION   
+	============================== -->
+	<section id="intro" class="parallax-section">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-12 col-sm-12">
+					<h1 class="wow bounceIn" data-wow-delay="0.9s">Velumaya Logistics LLC</h1>
+					<h3 class="wow fadeInUp" data-wow-delay="1.6s">Reliable Logistics & Manpower Consulting Solutions in Dubai</h3>
+					<a href="#overview" class="btn btn-lg btn-default smoothScroll wow fadeInUp hidden-xs" data-wow-delay="2.3s">LEARN MORE</a>
+					<a href="#register" class="btn btn-lg btn-danger smoothScroll wow fadeInUp" data-wow-delay="2.3s">REGISTER NOW</a>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- =========================
+	    OVERVIEW SECTION   
+	============================== -->
+	<section id="overview" class="parallax-section">
+		<div class="container">
+			<div class="row">
+
+				<div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.6s">
+					<h3>About Velumaya Logistics LLC</h3>
+					<p>Velumaya Logistics LLC is a Dubai-based logistics and manpower consulting company committed to helping businesses operate efficiently and scale with confidence. We partner with organizations across the UAE to deliver dependable logistics support and workforce solutions tailored to real operational needs.</p>
+					<p>With a strong understanding of local regulations and industry practices, we provide services that are practical, compliant, and results-driven.</p>
+				</div>
+
+				<div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.9s">
+					<img src="images/logistics/transport-logistics-concept.jpg" class="img-responsive" alt="Overview">
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- =========================
+	    DETAIL / HIGHLIGHTS SECTION   
+	============================== -->
+	<section id="detail" class="parallax-section">
+		<div class="container">
+			<div class="row">
+
+				<div class="wow fadeInLeft col-md-4 col-sm-4" data-wow-delay="0.3s">
+					<i class="fa fa-truck"></i>
+					<h3>Reliable Logistics Support</h3>
+					<p>
+						End-to-end logistics coordination ensuring timely deliveries,
+						smooth operations, and supply chain efficiency across the UAE.
+					</p>
+				</div>
+
+				<div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="0.6s">
+					<i class="fa fa-users"></i>
+					<h3>Professional Manpower Solutions</h3>
+					<p>
+						Skilled and semi-skilled manpower solutions designed to meet
+						operational demands across multiple industries.
+					</p>
+				</div>
+
+				<div class="wow fadeInRight col-md-4 col-sm-4" data-wow-delay="0.9s">
+					<i class="fa fa-shield"></i>
+					<h3>Trusted & Compliant</h3>
+					<p>
+						Fully compliant with UAE regulations, delivering transparent,
+						reliable, and long-term service partnerships.
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- =========================
+	    SERVICES SECTION   
+	============================== -->
+	<section id="services" class="parallax-section">
+		<div class="container">
+			<div class="row">
+
+				<!-- Section Title -->
+				<div class="wow fadeInDown col-md-12 col-sm-12">
+					<div class="section-title">
+						<h2>Our Services</h2>
+						<p>Reliable logistics and manpower solutions designed for business efficiency</p>
+					</div>
+				</div>
+
+				<!-- Service 1 -->
+				<div class="wow fadeInUp col-md-3 col-sm-6 col-xs-12" data-wow-delay="0.3s">
+					<div class="service-box">
+						<img src="images/logistics/logistic.png" alt="Logistics Services">
+						<h4>Logistics Solutions</h4>
+						<p>End-to-end logistics support including transportation, planning, and supply chain coordination.</p>
+					</div>
+				</div>
+
+				<!-- Service 2 -->
+				<div class="wow fadeInUp col-md-3 col-sm-6 col-xs-12" data-wow-delay="0.5s">
+					<div class="service-box">
+						<img src="images/logistics/engineer.png" alt="Manpower Consulting">
+						<h4>Manpower Consulting</h4>
+						<p>Skilled and semi-skilled workforce solutions tailored to your operational requirements.</p>
+					</div>
+				</div>
+
+				<!-- Service 3 -->
+				<div class="wow fadeInUp col-md-3 col-sm-6 col-xs-12" data-wow-delay="0.7s">
+					<div class="service-box">
+						<img src="images/logistics/call.png" alt="Transportation Support">
+						<h4>Transportation Support</h4>
+						<p>Efficient local and regional transportation coordination for seamless deliveries.</p>
+					</div>
+				</div>
+
+				<!-- Service 4 -->
+				<div class="wow fadeInUp col-md-3 col-sm-6 col-xs-12" data-wow-delay="0.9s">
+					<div class="service-box">
+						<img src="images/logistics/conversation.png" alt="Business Consulting">
+						<h4>Operational Consulting</h4>
+						<p>Customized consulting to improve efficiency, reduce costs, and streamline operations.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- =========================
+	    TEAM SECTION   
+	============================== -->
+	<section id="speakers" class="team-section">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-12 col-sm-12 wow fadeInDown">
+					<div class="team-section-header">
+						<span class="team-label">LEADERSHIP</span>
+						<h2>Meet Our Team</h2>
+						<p>The visionary minds driving Velumaya Logistics forward with passion and expertise</p>
+						<div class="team-header-line"></div>
+					</div>
+				</div>
+
+				<!-- Team Member Card -->
+				<div class="col-md-12 col-sm-12 wow fadeInUp" data-wow-delay="0.4s">
+					<div class="team-card">
+						<div class="row">
+							<div class="col-md-4 col-sm-5">
+								<div class="team-img-wrapper">
+									<img src="images/logistics/sabari-img.jpg" class="img-responsive team-photo" alt="Sabariganth Raja">
+								</div>
+							</div>
+							<div class="col-md-8 col-sm-7">
+								<div class="team-info">
+									<span class="team-role-badge">Founder & Managing Director</span>
+									<h3 class="team-name">Sabariganth Raja</h3>
+									<div class="team-divider"></div>
+									<p class="team-bio">With a strong focus on innovation, reliability, and customer-centric growth, Sabariganth Raja leads Velumaya with a clear vision for building trusted logistics and business solutions.</p>
+									<p class="team-bio">His leadership blends strategic thinking with a hands-on approach to delivering excellence across every engagement.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- =========================
+	    CONTACT US SECTION
+	============================== -->
+	<section id="register" class="parallax-section">
+		<div class="container">
+			<div class="row">
+
+				<!-- Contact Content -->
+				<div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="0.6s">
+					<h2>Contact Us</h2>
+					<h3>Let's discuss your logistics and manpower requirements</h3>
+					<p>
+						Velumaya Logistics LLC is here to support your business with reliable
+						logistics services and professional manpower consulting solutions.
+						Reach out to us using the form, and our team will respond promptly.
+					</p>
+					<p>
+						<strong>📍 Location:</strong> Dubai, United Arab Emirates<br>
+						<strong>📞 Phone:</strong> +971 58 119 7437<br>
+						<strong>📧 Email:</strong> info@velumaya.com
+					</p>
+				</div>
+
+				<!-- Contact Form -->
+				<div class="wow fadeInUp col-md-5 col-sm-5" data-wow-delay="1s">
+					<form action="#" method="post">
+						<input name="name" type="text" class="form-control" placeholder="Full Name" required>
+						<input name="phone" type="tel" class="form-control" placeholder="Phone Number">
+						<input name="email" type="email" class="form-control" placeholder="Email Address" required>
+						<input name="subject" type="text" class="form-control" placeholder="Subject">
+						<textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+						<div class="col-md-offset-6 col-md-6 col-sm-offset-1 col-sm-10">
+							<input name="submit" type="submit" class="form-control" id="submit" value="SEND MESSAGE">
+						</div>
+					</form>
+				</div>
+
+				<div class="col-md-1"></div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- =========================
+	     FAQ SECTION
+	============================== -->
+	<section id="faq" class="parallax-section">
+		<div class="container">
+			<div class="row">
+
+				<!-- Section Title -->
+				<div class="wow bounceIn col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 text-center">
+					<div class="section-title">
+						<h2>Frequently Asked Questions</h2>
+						<p>Answers to common questions about our logistics and manpower consulting services</p>
+					</div>
+				</div>
+
+				<!-- FAQ Accordion -->
+				<div class="wow fadeInUp col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10" data-wow-delay="0.9s">
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+						<!-- FAQ 1 -->
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingOne">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+										What services does Velumaya Logistics LLC provide?
+									</a>
+								</h4>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+								<div class="panel-body">
+									<p>We provide professional logistics services and manpower consulting solutions to businesses across the UAE. Our offerings include transportation coordination, logistics planning, supply chain support, and workforce management.</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- FAQ 2 -->
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingTwo">
+								<h4 class="panel-title">
+									<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+										Do you offer customized logistics and manpower solutions?
+									</a>
+								</h4>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+								<div class="panel-body">
+									<p>Yes. We work closely with each client to understand their operational needs and deliver tailored logistics and manpower solutions that are practical, efficient, and cost-effective.</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- FAQ 3 -->
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingThree">
+								<h4 class="panel-title">
+									<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+										Which industries do you serve?
+									</a>
+								</h4>
+							</div>
+							<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+								<div class="panel-body">
+									<p>We serve a wide range of industries including logistics and supply chain, construction, manufacturing, retail and distribution, facilities management, and corporate services.</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- FAQ 4 -->
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingFour">
+								<h4 class="panel-title">
+									<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+										How can I request a quote or consultation?
+									</a>
+								</h4>
+							</div>
+							<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+								<div class="panel-body">
+									<p>You can contact us via phone or email, or submit your enquiry through our website contact form. Our team will review your requirements and respond promptly.</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- =========================
+	    FOOTER SECTION   
+	============================== -->
+	<footer>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-12 col-sm-12">
+					<p class="wow fadeInUp" data-wow-delay="0.6s">Copyright &copy; 2025 | <a rel="nofollow" href="https://velumaya.com">Velumaya</a></p>
+
+					<ul class="social-icon">
+						<li><a href="#" class="fa fa-facebook wow fadeInUp" data-wow-delay="1s"></a></li>
+						<li><a href="#" class="fa fa-twitter wow fadeInUp" data-wow-delay="1.3s"></a></li>
+						<li><a href="#" class="fa fa-dribbble wow fadeInUp" data-wow-delay="1.6s"></a></li>
+						<li><a href="#" class="fa fa-behance wow fadeInUp" data-wow-delay="1.9s"></a></li>
+						<li><a href="#" class="fa fa-google-plus wow fadeInUp" data-wow-delay="2s"></a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Back top -->
+	<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+
+	<!-- =========================
+	     SCRIPTS   
+	============================== -->
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.parallax.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/smoothscroll.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/custom.js"></script>
 
 </body>
 

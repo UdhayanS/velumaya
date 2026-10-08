@@ -1,425 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Velumaya</title>
 	<meta name="description" content="Velumaya Logistics LLC - Reliable Logistics & Manpower Consulting Solutions in Dubai, UAE">
 	<meta name="author" content="Velumaya Logistics LLC">
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/owl.theme.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
-
-	<!-- Main css -->
+	<meta name="theme-color" content="#061a40">
+	<link rel="icon" href="images/logistics/logo.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
-
-	<!-- Google Font -->
-	<link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
-
 </head>
 
-<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+<body>
 
-	<!-- =========================
-	     PRE LOADER       
-	============================== -->
-	<div class="preloader">
-		<div class="sk-rotating-plane"></div>
-	</div>
+	<div class="progress" id="progress"></div>
 
-
-	<!-- =========================
-	     NAVIGATION LINKS     
-	============================== -->
-	<div class="navbar navbar-fixed-top custom-navbar" role="navigation">
-		<div class="container">
-
-			<!-- navbar header -->
-			<div class="navbar-header">
-				<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="icon icon-bar"></span>
-					<span class="icon icon-bar"></span>
-					<span class="icon icon-bar"></span>
-				</button>
-				<a href="#" class="navbar-brand brand-with-logo">
-					<img src="images/logistics/logo.png" alt="Velu Maya Logo" class="nav-logo">
-					<span class="brand-text">Velu Maya</span>
-				</a>
-			</div>
-
-			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#intro" class="smoothScroll">Home</a></li>
-					<li><a href="#overview" class="smoothScroll">About</a></li>
-					<li><a href="#services" class="smoothScroll">Services</a></li>
-					<li><a href="#speakers" class="smoothScroll">Teams</a></li>
-					<li><a href="#register" class="smoothScroll">Contact</a></li>
-				</ul>
-			</div>
-
+	<!-- PRELOADER -->
+	<div class="preloader" id="preloader">
+		<div class="loader">
+			<img src="images/logistics/logo.png" alt="">
+			<div class="loader-bar"><span></span></div>
 		</div>
 	</div>
 
 
-	<!-- =========================
-	    INTRO SECTION   
-	============================== -->
-	<section id="intro" class="parallax-section">
-		<div class="container">
-			<div class="row">
+	<!-- NAVIGATION -->
+	<header class="nav" id="nav">
+		<div class="container nav-inner">
+			<a href="index.html" class="brand">
+				<span class="logo-crop"><img src="images/logistics/logo.png" alt="Velu Maya Logo"></span>
+				<span>Velu Maya</span>
+			</a>
+			<nav class="menu" id="menu">
+				<a href="index.html" class="active">Home</a>
+				<a href="about.html">About</a>
+				<a href="services.html">Services</a>
+				<a href="team.html">Teams</a>
+				<a href="faq.html">FAQ</a>
+				<a href="contact.html" class="menu-cta">Contact</a>
+			</nav>
+			<button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+		</div>
+	</header>
 
-				<div class="col-md-12 col-sm-12">
-					<h1 class="wow bounceIn" data-wow-delay="0.9s">Velumaya Logistics LLC</h1>
-					<h3 class="wow fadeInUp" data-wow-delay="1.6s">Reliable Logistics & Manpower Consulting Solutions in Dubai</h3>
-					<a href="#overview" class="btn btn-lg btn-default smoothScroll wow fadeInUp hidden-xs" data-wow-delay="2.3s">LEARN MORE</a>
-					<a href="#register" class="btn btn-lg btn-danger smoothScroll wow fadeInUp" data-wow-delay="2.3s">REGISTER NOW</a>
+	<!-- HERO -->
+	<section id="intro" class="hero">
+		<div class="hero-bg"></div>
+		<canvas id="particles" aria-hidden="true"></canvas>
+		<div class="blob b1"></div>
+		<div class="blob b2"></div>
+		<div class="blob b3"></div>
+
+		<div class="container hero-inner">
+			<div class="hero-copy">
+				<span class="pill reveal"><i></i> Dubai · United Arab Emirates</span>
+				<h1 class="reveal" style="--d:.1s">Velumaya <span class="grad">Logistics</span> LLC</h1>
+				<p class="lead reveal" style="--d:.2s">Reliable Logistics &amp; Manpower Consulting Solutions in <span class="typed" id="typed" data-words="Dubai|the UAE|your business"></span><b class="caret"></b></p>
+				<div class="hero-actions reveal" style="--d:.3s">
+					<a href="about.html" class="btn btn-primary magnetic">Learn More <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+					<a href="contact.html" class="btn btn-ghost magnetic">Contact Us</a>
 				</div>
+			</div>
 
+			<div class="hero-visual reveal" style="--d:.25s">
+				<div class="scene">
+					<div class="scene-sky">
+						<svg class="plane" viewBox="0 0 64 64"><path d="M60 30L36 26 22 6h-6l6 20-14 2-6-6H0l4 12-4 12h2l6-6 14 2-6 20h6l14-20 24-4c3-.6 4-5 0-6z" fill="currentColor" stroke="none"/></svg>
+						<span class="trail"></span>
+					</div>
+					<div class="logo-big"><span class="logo-crop"><img src="images/logistics/logo.png" alt="Velumaya"></span></div>
+					<div class="road">
+						<svg class="truck" viewBox="0 0 220 90">
+							<rect x="2" y="8" width="140" height="56" rx="5" fill="#fff"/>
+							<rect x="2" y="8" width="140" height="12" rx="5" fill="#2f86ff"/>
+							<text x="72" y="46" text-anchor="middle" font-family="Poppins,sans-serif" font-weight="800" font-size="17" fill="#0b4fd6" stroke="none">VELUMAYA</text>
+							<path d="M146 22h38l26 24v18h-64z" fill="#1668f3"/>
+							<path d="M172 28h10l16 17h-26z" fill="#bfe0ff" stroke="none"/>
+							<rect x="2" y="64" width="208" height="6" rx="3" fill="#061a40"/>
+							<g class="wheel"><circle cx="34" cy="72" r="12" fill="#0a1634"/><circle cx="34" cy="72" r="5" fill="#9bb8e8"/><path d="M34 62v20M24 72h20" stroke="#0a1634" stroke-width="2"/></g>
+							<g class="wheel"><circle cx="64" cy="72" r="12" fill="#0a1634"/><circle cx="64" cy="72" r="5" fill="#9bb8e8"/><path d="M64 62v20M54 72h20" stroke="#0a1634" stroke-width="2"/></g>
+							<g class="wheel"><circle cx="176" cy="72" r="12" fill="#0a1634"/><circle cx="176" cy="72" r="5" fill="#9bb8e8"/><path d="M176 62v20M166 72h20" stroke="#0a1634" stroke-width="2"/></g>
+							<path d="M208 52h10" stroke="#ffd36a" stroke-width="4"/>
+						</svg>
+						<span class="dashes"></span>
+					</div>
+				</div>
+				<div class="chip c1"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg> Logistics</div>
+				<div class="chip c2"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 11a3 3 0 100-6M18 14c2 .6 3 2.4 3 6"/></svg> Manpower</div>
+				<div class="chip c3"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg> Compliant</div>
+			</div>
+		</div>
+
+		<a href="#detail" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+
+		<svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0 60C240 120 480 0 720 40s480 80 720 20V120H0z"/></svg>
+	</section>
+	<!-- ROUTE MARQUEE -->
+	<div class="marquee" aria-hidden="true">
+		<div class="marquee-track">
+			<span>Logistics Planning</span><span>Supply Chain</span><span>Transportation</span><span>Workforce Management</span><span>Construction</span><span>Manufacturing</span><span>Retail &amp; Distribution</span><span>Facilities Management</span><span>Corporate Services</span>
+			<span>Logistics Planning</span><span>Supply Chain</span><span>Transportation</span><span>Workforce Management</span><span>Construction</span><span>Manufacturing</span><span>Retail &amp; Distribution</span><span>Facilities Management</span><span>Corporate Services</span>
+		</div>
+	</div>
+	<!-- HIGHLIGHTS -->
+	<section id="detail" class="section alt">
+		<div class="container grid-3">
+			<article class="card feature reveal" style="--d:.0s">
+				<div class="icon"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></div>
+				<h3>Reliable Logistics Support</h3>
+				<p>End-to-end logistics coordination ensuring timely deliveries, smooth operations, and supply chain efficiency across the UAE.</p>
+			</article>
+			<article class="card feature reveal" style="--d:.12s">
+				<div class="icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 11a3 3 0 100-6M18 14c2 .6 3 2.4 3 6"/></svg></div>
+				<h3>Professional Manpower Solutions</h3>
+				<p>Skilled and semi-skilled manpower solutions designed to meet operational demands across multiple industries.</p>
+			</article>
+			<article class="card feature reveal" style="--d:.24s">
+				<div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg></div>
+				<h3>Trusted &amp; Compliant</h3>
+				<p>Fully compliant with UAE regulations, delivering transparent, reliable, and long-term service partnerships.</p>
+			</article>
+		</div>
+	</section>
+	<section class="section">
+		<div class="container">
+			<div class="section-title reveal">
+				<span class="eyebrow">Explore</span>
+				<h2>Everything about <span class="grad">Velumaya</span></h2>
+				<p>Learn who we are, what we offer and how to reach us</p>
+			</div>
+			<div class="grid-4">
+				<a href="about.html" class="card link-card reveal" style="--d:0s"><span class="num">01</span><h4>About Us</h4><p>Our story, approach and commitment to UAE-compliant operations.</p><i>Read more →</i></a>
+				<a href="services.html" class="card link-card reveal" style="--d:.1s"><span class="num">02</span><h4>Our Services</h4><p>Logistics, manpower, transportation and operational consulting.</p><i>View services →</i></a>
+				<a href="team.html" class="card link-card reveal" style="--d:.2s"><span class="num">03</span><h4>Our Team</h4><p>Meet the leadership behind Velumaya Logistics.</p><i>Meet the team →</i></a>
+				<a href="faq.html" class="card link-card reveal" style="--d:.3s"><span class="num">04</span><h4>FAQ</h4><p>Quick answers to common questions about working with us.</p><i>See answers →</i></a>
 			</div>
 		</div>
 	</section>
 
-
-	<!-- =========================
-	    OVERVIEW SECTION   
-	============================== -->
-	<section id="overview" class="parallax-section">
-		<div class="container">
-			<div class="row">
-
-				<div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.6s">
-					<h3>About Velumaya Logistics LLC</h3>
-					<p>Velumaya Logistics LLC is a Dubai-based logistics and manpower consulting company committed to helping businesses operate efficiently and scale with confidence. We partner with organizations across the UAE to deliver dependable logistics support and workforce solutions tailored to real operational needs.</p>
-					<p>With a strong understanding of local regulations and industry practices, we provide services that are practical, compliant, and results-driven.</p>
-				</div>
-
-				<div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.9s">
-					<img src="images/logistics/transport-logistics-concept.jpg" class="img-responsive" alt="Overview">
-				</div>
-
-			</div>
+	<section class="cta">
+		<div class="container cta-inner reveal">
+			<div><h2>Ready to move your business forward?</h2><p>Tell us about your logistics and manpower requirements — we respond promptly.</p></div>
+			<a href="contact.html" class="btn btn-primary">Contact Us <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 		</div>
 	</section>
 
-
-	<!-- =========================
-	    DETAIL / HIGHLIGHTS SECTION   
-	============================== -->
-	<section id="detail" class="parallax-section">
-		<div class="container">
-			<div class="row">
-
-				<div class="wow fadeInLeft col-md-4 col-sm-4" data-wow-delay="0.3s">
-					<i class="fa fa-truck"></i>
-					<h3>Reliable Logistics Support</h3>
-					<p>
-						End-to-end logistics coordination ensuring timely deliveries,
-						smooth operations, and supply chain efficiency across the UAE.
-					</p>
-				</div>
-
-				<div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="0.6s">
-					<i class="fa fa-users"></i>
-					<h3>Professional Manpower Solutions</h3>
-					<p>
-						Skilled and semi-skilled manpower solutions designed to meet
-						operational demands across multiple industries.
-					</p>
-				</div>
-
-				<div class="wow fadeInRight col-md-4 col-sm-4" data-wow-delay="0.9s">
-					<i class="fa fa-shield"></i>
-					<h3>Trusted & Compliant</h3>
-					<p>
-						Fully compliant with UAE regulations, delivering transparent,
-						reliable, and long-term service partnerships.
-					</p>
-				</div>
-
-			</div>
-		</div>
-	</section>
-
-
-	<!-- =========================
-	    SERVICES SECTION   
-	============================== -->
-	<section id="services" class="parallax-section">
-		<div class="container">
-			<div class="row">
-
-				<!-- Section Title -->
-				<div class="wow fadeInDown col-md-12 col-sm-12">
-					<div class="section-title">
-						<h2>Our Services</h2>
-						<p>Reliable logistics and manpower solutions designed for business efficiency</p>
-					</div>
-				</div>
-
-				<!-- Service 1 -->
-				<div class="wow fadeInUp col-md-3 col-sm-6 col-xs-12" data-wow-delay="0.3s">
-					<div class="service-box">
-						<img src="images/logistics/logistic.png" alt="Logistics Services">
-						<h4>Logistics Solutions</h4>
-						<p>End-to-end logistics support including transportation, planning, and supply chain coordination.</p>
-					</div>
-				</div>
-
-				<!-- Service 2 -->
-				<div class="wow fadeInUp col-md-3 col-sm-6 col-xs-12" data-wow-delay="0.5s">
-					<div class="service-box">
-						<img src="images/logistics/engineer.png" alt="Manpower Consulting">
-						<h4>Manpower Consulting</h4>
-						<p>Skilled and semi-skilled workforce solutions tailored to your operational requirements.</p>
-					</div>
-				</div>
-
-				<!-- Service 3 -->
-				<div class="wow fadeInUp col-md-3 col-sm-6 col-xs-12" data-wow-delay="0.7s">
-					<div class="service-box">
-						<img src="images/logistics/call.png" alt="Transportation Support">
-						<h4>Transportation Support</h4>
-						<p>Efficient local and regional transportation coordination for seamless deliveries.</p>
-					</div>
-				</div>
-
-				<!-- Service 4 -->
-				<div class="wow fadeInUp col-md-3 col-sm-6 col-xs-12" data-wow-delay="0.9s">
-					<div class="service-box">
-						<img src="images/logistics/conversation.png" alt="Business Consulting">
-						<h4>Operational Consulting</h4>
-						<p>Customized consulting to improve efficiency, reduce costs, and streamline operations.</p>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</section>
-
-
-	<!-- =========================
-	    TEAM SECTION   
-	============================== -->
-	<section id="speakers" class="team-section">
-		<div class="container">
-			<div class="row">
-
-				<div class="col-md-12 col-sm-12 wow fadeInDown">
-					<div class="team-section-header">
-						<span class="team-label">LEADERSHIP</span>
-						<h2>Meet Our Team</h2>
-						<p>The visionary minds driving Velumaya Logistics forward with passion and expertise</p>
-						<div class="team-header-line"></div>
-					</div>
-				</div>
-
-				<!-- Team Member Card -->
-				<div class="col-md-12 col-sm-12 wow fadeInUp" data-wow-delay="0.4s">
-					<div class="team-card">
-						<div class="row">
-							<div class="col-md-4 col-sm-5">
-								<div class="team-img-wrapper">
-									<img src="images/logistics/sabari-img.jpg" class="img-responsive team-photo" alt="Sabariganth Raja">
-								</div>
-							</div>
-							<div class="col-md-8 col-sm-7">
-								<div class="team-info">
-									<span class="team-role-badge">Founder & Managing Director</span>
-									<h3 class="team-name">Sabariganth Raja</h3>
-									<div class="team-divider"></div>
-									<p class="team-bio">With a strong focus on innovation, reliability, and customer-centric growth, Sabariganth Raja leads Velumaya with a clear vision for building trusted logistics and business solutions.</p>
-									<p class="team-bio">His leadership blends strategic thinking with a hands-on approach to delivering excellence across every engagement.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</section>
-
-
-	<!-- =========================
-	    CONTACT US SECTION
-	============================== -->
-	<section id="register" class="parallax-section">
-		<div class="container">
-			<div class="row">
-
-				<!-- Contact Content -->
-				<div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="0.6s">
-					<h2>Contact Us</h2>
-					<h3>Let's discuss your logistics and manpower requirements</h3>
-					<p>
-						Velumaya Logistics LLC is here to support your business with reliable
-						logistics services and professional manpower consulting solutions.
-						Reach out to us using the form, and our team will respond promptly.
-					</p>
-					<p>
-						<strong>📍 Location:</strong> Dubai, United Arab Emirates<br>
-						<strong>📞 Phone:</strong> +971 58 119 7437<br>
-						<strong>📧 Email:</strong> info@velumaya.com
-					</p>
-				</div>
-
-				<!-- Contact Form -->
-				<div class="wow fadeInUp col-md-5 col-sm-5" data-wow-delay="1s">
-					<form action="#" method="post">
-						<input name="name" type="text" class="form-control" placeholder="Full Name" required>
-						<input name="phone" type="tel" class="form-control" placeholder="Phone Number">
-						<input name="email" type="email" class="form-control" placeholder="Email Address" required>
-						<input name="subject" type="text" class="form-control" placeholder="Subject">
-						<textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
-						<div class="col-md-offset-6 col-md-6 col-sm-offset-1 col-sm-10">
-							<input name="submit" type="submit" class="form-control" id="submit" value="SEND MESSAGE">
-						</div>
-					</form>
-				</div>
-
-				<div class="col-md-1"></div>
-
-			</div>
-		</div>
-	</section>
-
-
-	<!-- =========================
-	     FAQ SECTION
-	============================== -->
-	<section id="faq" class="parallax-section">
-		<div class="container">
-			<div class="row">
-
-				<!-- Section Title -->
-				<div class="wow bounceIn col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 text-center">
-					<div class="section-title">
-						<h2>Frequently Asked Questions</h2>
-						<p>Answers to common questions about our logistics and manpower consulting services</p>
-					</div>
-				</div>
-
-				<!-- FAQ Accordion -->
-				<div class="wow fadeInUp col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10" data-wow-delay="0.9s">
-					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-						<!-- FAQ 1 -->
-						<div class="panel panel-default">
-							<div class="panel-heading" role="tab" id="headingOne">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-										What services does Velumaya Logistics LLC provide?
-									</a>
-								</h4>
-							</div>
-							<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-								<div class="panel-body">
-									<p>We provide professional logistics services and manpower consulting solutions to businesses across the UAE. Our offerings include transportation coordination, logistics planning, supply chain support, and workforce management.</p>
-								</div>
-							</div>
-						</div>
-
-						<!-- FAQ 2 -->
-						<div class="panel panel-default">
-							<div class="panel-heading" role="tab" id="headingTwo">
-								<h4 class="panel-title">
-									<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-										Do you offer customized logistics and manpower solutions?
-									</a>
-								</h4>
-							</div>
-							<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-								<div class="panel-body">
-									<p>Yes. We work closely with each client to understand their operational needs and deliver tailored logistics and manpower solutions that are practical, efficient, and cost-effective.</p>
-								</div>
-							</div>
-						</div>
-
-						<!-- FAQ 3 -->
-						<div class="panel panel-default">
-							<div class="panel-heading" role="tab" id="headingThree">
-								<h4 class="panel-title">
-									<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-										Which industries do you serve?
-									</a>
-								</h4>
-							</div>
-							<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-								<div class="panel-body">
-									<p>We serve a wide range of industries including logistics and supply chain, construction, manufacturing, retail and distribution, facilities management, and corporate services.</p>
-								</div>
-							</div>
-						</div>
-
-						<!-- FAQ 4 -->
-						<div class="panel panel-default">
-							<div class="panel-heading" role="tab" id="headingFour">
-								<h4 class="panel-title">
-									<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-										How can I request a quote or consultation?
-									</a>
-								</h4>
-							</div>
-							<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-								<div class="panel-body">
-									<p>You can contact us via phone or email, or submit your enquiry through our website contact form. Our team will review your requirements and respond promptly.</p>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</section>
-
-
-	<!-- =========================
-	    FOOTER SECTION   
-	============================== -->
-	<footer>
-		<div class="container">
-			<div class="row">
-
-				<div class="col-md-12 col-sm-12">
-					<p class="wow fadeInUp" data-wow-delay="0.6s">Copyright &copy; 2025 | <a rel="nofollow" href="https://velumaya.com">Velumaya</a></p>
-
-					<ul class="social-icon">
-						<li><a href="#" class="fa fa-facebook wow fadeInUp" data-wow-delay="1s"></a></li>
-						<li><a href="#" class="fa fa-twitter wow fadeInUp" data-wow-delay="1.3s"></a></li>
-						<li><a href="#" class="fa fa-dribbble wow fadeInUp" data-wow-delay="1.6s"></a></li>
-						<li><a href="#" class="fa fa-behance wow fadeInUp" data-wow-delay="1.9s"></a></li>
-						<li><a href="#" class="fa fa-google-plus wow fadeInUp" data-wow-delay="2s"></a></li>
-					</ul>
-				</div>
-
-			</div>
+	<!-- FOOTER -->
+	<footer class="footer">
+		<div class="container foot-inner">
+			<a href="index.html" class="brand"><span class="logo-crop"><img src="images/logistics/logo.png" alt="Velu Maya Logo"></span><span>Velu Maya</span></a>
+			<nav class="foot-links"><a href="about.html">About</a><a href="services.html">Services</a><a href="team.html">Teams</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav>
+			<p>Copyright &copy; 2025 | <a rel="nofollow" href="https://velumaya.com">Velumaya</a></p>
 		</div>
 	</footer>
 
+	<a href="#intro" class="go-top" id="goTop" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg></a>
+	<div class="toast" id="toast" role="status"></div>
 
-	<!-- Back top -->
-	<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
-
-
-	<!-- =========================
-	     SCRIPTS   
-	============================== -->
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.parallax.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/smoothscroll.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/custom.js"></script>
-
+	<script src="js/main.js"></script>
 </body>
-
 </html>

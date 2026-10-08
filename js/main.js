@@ -11,12 +11,13 @@
   setTimeout(hidePre, 4000);
 
   /* ---------- scroll: progress bar, nav, go-top ---------- */
-  var nav = $('#nav'), bar = $('#progress'), goTop = $('#goTop');
+  var topbar = $('#topbar'), nav = $('#nav'), bar = $('#progress'), goTop = $('#goTop');
   var links = $$('.menu a');
   function onScroll() {
     var y = window.scrollY, h = document.documentElement.scrollHeight - window.innerHeight;
     bar.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
     nav.classList.toggle('scrolled', y > 40);
+    if (topbar) topbar.classList.toggle('hide', y > 40);
     goTop.classList.toggle('show', y > 500);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -113,11 +114,11 @@
         if (p.y < 0 || p.y > H) p.vy *= -1;
         var dx = p.x - mouse.x, dy = p.y - mouse.y, d = dx * dx + dy * dy;
         if (d < 14000) { p.x += dx * 0.012; p.y += dy * 0.012; }
-        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fillStyle = 'rgba(140,200,255,.8)'; ctx.fill();
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fillStyle = 'rgba(147,197,253,.8)'; ctx.fill();
         for (var j = i + 1; j < pts.length; j++) {
           var q = pts[j], ax = p.x - q.x, ay = p.y - q.y, dd = ax * ax + ay * ay;
           if (dd < 14000) {
-            ctx.strokeStyle = 'rgba(90,165,255,' + (0.3 * (1 - dd / 14000)) + ')';
+            ctx.strokeStyle = 'rgba(96,165,250,' + (0.3 * (1 - dd / 14000)) + ')';
             ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
           }
         }
